@@ -1,0 +1,46 @@
+{
+    "clients": [
+        "user1@domain.net",
+        "user2@domain.net",
+        "user3@domain.net"
+    ],
+    "products": [
+        {
+            "reference": "GT",
+            "name": "Green Tea",            
+            "price": "3.00 USD",
+            "distributed_by": [
+                {
+                    "name": "Tea Distributors",
+                    "country": "Colombia",                   
+                },
+                {
+                    "name": "Green Tea Farmers CO",
+                    "country": "Puerto Rico",    
+                }
+            ]
+        },
+        {
+            "reference": "WT",
+            "name": "White Tea",            
+            "price": "4.50 USD",
+            "distributed_by": [
+                {
+                    "name": "BayArea Distributions",
+                    "country": "Uniated States",                   
+                }
+            ]
+        },
+        {
+            "reference": "BT",
+            "name": "Black Tea",            
+            "price": "2.00 USD",
+            "distributed_by": [
+                {
+                    "name": "BayArea Distributions",
+                    "country": "Uniated States",                   
+                }
+            ]
+        }
+    ]
+}
