@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title> Test Firebase IWD18</title>
+</head>
+
+<body>
+
+
+<h1 id="titleFromFirebase"> </h1>
+<h3> Testing real-time db already?</h3>
+<h3 id="valueRealtime"> </h3>
+
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDnB_gLGIuKv0QCOQcLlEBQzQyoq8rHuNk",
+    authDomain: "iwd18-test.firebaseapp.com",
+    databaseURL: "https://iwd18-test.firebaseio.com",
+    projectId: "iwd18-test",
+    storageBucket: "iwd18-test.appspot.com",
+    messagingSenderId: "132731456067"
+  };
+  firebase.initializeApp(config);
+
+  var titleFromFirebase = document.getElementById('titleFromFirebase');
+  var dbRef = firebase.database().ref().child('webpage_title');
+  dbRef.on('value', snap => titleFromFirebase.innerText = snap.val());
+
+  var valueRealtime = document.getElementById('valueRealtime');
+  var dbRef = firebase.database().ref().child('realtime');
+  dbRef.on('value', snap => valueRealtime.innerText = snap.val());
+
+</script>
+
+</body>
+
+</html>
